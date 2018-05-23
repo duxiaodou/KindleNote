@@ -1,0 +1,67 @@
+<nav class="navbar navbar-light">
+  <a class="navbar-brand" href="#">
+  </a>
+
+  <ul class="nav nav-pills pull-right">
+    <li class="nav-item dropdown" style="margin-right: 10px;">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          中文简体
+      </a>
+  
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">
+            <%= image_tag "flag/China.png", :style =>"width: 50px; height: 50px;" %>
+            中文(简体)
+          </a>
+          <a class="dropdown-item" href="#">
+            <%= image_tag "flag/China-HongKong.png", :style =>"width: 50px; height: 50px;" %>
+            中文(繁體)
+          </a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">
+            <%= image_tag "flag/UnitedStates.png", :style =>"width: 50px; height: 50px;" %>
+            English
+          </a>
+      </div>  
+    </li>
+
+    <li class="nav-item" style="margin-right: 10px;">
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary">
+          <%= fa_icon "thumbs-up" %>
+          <%= t('header.support') %>
+        </button>
+      </div>
+    </li>
+
+    <% if user_signed_in? %>
+      <li class="nav-item">
+        <div class="btn-group">
+          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle fa-2x"></i></a>
+        
+          <div class="dropdown-menu">
+            <span class="dropdown-item disabled" disabled style="color:#3089DF;">
+            </span>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-book" aria-hidden="true">&nbsp;Your notes</i>
+            </a>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-cog" aria-hidden="true">&nbsp;Set up</i>
+            </a>
+
+            <div class="dropdown-divider"></div>
+            
+            <i class="fa fa-power-off" aria-hidden="true">Sign out</i>
+          </div>
+        </div>
+      </li>
+    <% else %>
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary bg-dark"><%= t('header.register') %></button>
+        <button type="button" class="btn btn-secondary bg-info"><%= t('header.login') %></button>
+      </div>
+    <% end %>
+  </ul>
+ 
+</nav>

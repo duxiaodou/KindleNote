@@ -1,0 +1,13 @@
+zh_cn:
+  app:
+    name: "KindleNote"
+    introduce: "管理你的Kindle标记与笔记！"
+
+  header:
+    login: '登 录'
+    register: '注 册'
+    support: '捐 赠'
+
+  will_paginate:
+    previous_label: '上一页'
+    next_label: '下一页'
