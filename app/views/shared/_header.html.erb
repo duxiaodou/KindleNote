@@ -58,8 +58,16 @@
       </li>
     <% else %>
       <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-secondary bg-dark"><%= t('header.register') %></button>
-        <button type="button" class="btn btn-secondary bg-info"><%= t('header.login') %></button>
+        <button type="button" class="btn btn-secondary bg-dark">
+          <a href="<%= register_path %>" style="color: #FFF;">
+            <%= t('header.register') %>    
+          </a>
+        </button>
+        <button type="button" class="btn btn-secondary bg-info">
+          <a href="<%= login_path %>" style="color: #FFF;">
+            <%= t('header.login') %>
+          </a>
+          </button>
       </div>
     <% end %>
   </ul>

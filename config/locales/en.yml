@@ -31,10 +31,31 @@
 
 en:
   app:
-      name: "KindleNote"
-      introduce: "Export your kindle highlights and notes !"
+      name: 'KindleNote'
+      introduce: 'Export your kindle highlights and notes !'
 
   header:
     login: 'Log in'
     register: 'Register'
     support: 'Support'
+
+  register:
+    email_hint: 'Enter email'
+    password_hint: 'Enter password'
+    repetition_password_hint: 'Enter password again'
+    accept_license: 'Accept license'
+    license: '《User agreement》'
+    already_registered?: 'Already registered ?'
+    thiry_party_login: 'Thiry Party Login'
+    privacy_protection: "We'll never share your email with anyone else."
+
+  login:
+    email_hint: 'Enter email'
+    password_hint: 'Enter password'
+    captcha_hint: 'Enter captcha'
+    remember_me: 'Remember me'
+    not_yet_registered?: 'Not yet registered ?'
+    retrieve_the_password!: 'Retrieve the password !'
+    thiry_party_login: 'Thiry Party Login'
+    privacy_protection: "We'll never share your email with anyone else."
+

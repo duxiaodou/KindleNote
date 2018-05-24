@@ -1,12 +1,32 @@
 zh_cn:
   app:
-    name: "KindleNote"
-    introduce: "管理你的Kindle标记与笔记！"
+    name: 'KindleNote'
+    introduce: '管理你的Kindle标记与笔记！'
 
   header:
     login: '登 录'
     register: '注 册'
     support: '捐 赠'
+
+  register:
+    email_hint: '输入邮箱'
+    password_hint: '输入密码'
+    repetition_password_hint: '再次输入密码'
+    accept_license: '我接受'
+    license: '《用户使用协议》'
+    already_registered?: '已经注册 ？'
+    thiry_party_login: '第三方登录'
+    privacy_protection_hint: '我们不会将您的私密信息分享给他人'
+
+  login:
+    email_hint: '输入邮箱'
+    password_hint: '输入密码'
+    captcha_hint: '输入验证码'
+    remember_me: '记住我'
+    not_yet_registered?: '还未注册 ？'
+    retrieve_the_password!: '找回密码 ！'
+    thiry_party_login: '第三方登录'
+    privacy_protection_hint: "保护您的隐私不受侵犯是我们义不容辞的责任"
 
   will_paginate:
     previous_label: '上一页'
