@@ -6,7 +6,14 @@ zh_cn:
   header:
     login: '登 录'
     register: '注 册'
-    support: '捐 赠'
+    support: '捐 助'
+    home: '主 页'
+    menu:
+        setting_up: '设置'
+        logout: '退出'
+        support: '捐 助'
+        upload: '上传文件'
+        user: '个人中心'
 
   register:
     email_hint: '输入邮箱'
