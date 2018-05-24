@@ -28,6 +28,17 @@ zh_cn:
     thiry_party_login: '第三方登录'
     privacy_protection_hint: "保护您的隐私不受侵犯是我们义不容辞的责任"
 
+  activerecord:
+    errors:
+        models:
+            user:
+                attributes:
+                    email:
+                        blank: '邮箱不能为空'
+                    password:
+                        too_short: '密码太短'
+                    password_confirmation:
+                        confirmation: '2次输入的密码不一致'
   will_paginate:
     previous_label: '上一页'
     next_label: '下一页'

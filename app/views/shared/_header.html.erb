@@ -59,17 +59,26 @@
     <% else %>
       <div class="btn-group" role="group" aria-label="Basic example">
         <button type="button" class="btn btn-secondary bg-dark">
-          <a href="<%= register_path %>" style="color: #FFF;">
+          <a href="<%= new_user_registration_path %>" style="color: #FFF;">
             <%= t('header.register') %>    
           </a>
         </button>
         <button type="button" class="btn btn-secondary bg-info">
-          <a href="<%= login_path %>" style="color: #FFF;">
+          <a href="<%= new_user_session_path %>" style="color: #FFF;">
             <%= t('header.login') %>
           </a>
           </button>
       </div>
     <% end %>
   </ul>
- 
 </nav>
+
+<div class="row text-center">
+  <div class="col-12">
+    <% flash.each do |key, value| %>
+      <div class="alert alert-info" role="alert">
+        <%= value.first %>
+      </div>
+    <% end %>
+  </div>    
+</div>

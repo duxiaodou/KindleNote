@@ -14,8 +14,6 @@
   </header>
   <body>
     <div class="container">
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
       <%= yield %>
     </div>
     
@@ -24,4 +22,9 @@
   <footer>
     <%= render "shared/footer" %>
   </footer>
+
+  <script type="text/javascript">
+    //auto hide the flash messages after 3 ms
+    $(".alert" ).fadeOut(5000);
+  </script>
 </html>
