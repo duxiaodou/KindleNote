@@ -1,0 +1,5 @@
+<%= form_for(current_user, url: clippings_path, method: "post" ) do |form| %>
+
+  <%= form.file_field :clipping %><br>
+  <%= form.submit %>
+<% end %>

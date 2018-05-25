@@ -1,3 +1,24 @@
+<%= form_for '' do |f| %>
+  <div class='form-row'>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+  
+  <div class='form-row'>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+ 
+  
+  <div class='form-row'>
+    <%= f.label :avatar, 'Attach Avatar' %>
+    <%= f.file_field :avatar %>
+  </div>
+  
+  <div class='form-row'>    
+    <%= f.submit %>
+  </div>
+<% end %>
 <div class="row">
   <div class="card col-12 text-center">
     <div class="card-header">

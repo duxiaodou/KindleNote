@@ -11,4 +11,22 @@ class UsersController < ApplicationController
     render 'shared/_license'
   end
 
+  def show
+  end
+
+  def update
+
+    if params[:user].has_key?(:avatar)
+      current_user.avatar.purge
+      current_user.avatar.attach(params[:user][:avatar])
+    end
+    current_user.update(user_params.except(:avatar))
+    render 'users/show'
+
+  end
+
+  def user_params
+      params.require(:user).permit(:name, :email, :password, :avatar)
+  end
+
 end

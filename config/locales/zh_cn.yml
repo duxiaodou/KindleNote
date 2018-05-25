@@ -7,7 +7,7 @@ zh_cn:
     login: '登 录'
     register: '注 册'
     support: '捐 助'
-    home: '主 页'
+    profile: '个 人'
     menu:
         setting_up: '设置'
         logout: '退出'

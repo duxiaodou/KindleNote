@@ -38,7 +38,7 @@ en:
     login: 'Log in'
     register: 'Register'
     support: 'Support'
-    home: 'Home'
+    profile: 'Profile'
     menu:
         setting_up: 'Setting up'
         logout: 'Log out'

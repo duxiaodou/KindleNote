@@ -1,0 +1,2 @@
+module CippingsHelper
+end

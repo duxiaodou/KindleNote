@@ -1,5 +1,5 @@
 <nav class="navbar navbar-light">
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" href="<%= root_path %>">
   </a>
 
   <ul class="nav nav-pills pull-right">
@@ -28,10 +28,14 @@
     <li class="nav-item" style="margin-right: 10px;">
       <div class="btn-group" role="group" aria-label="Basic example">
         <% if user_signed_in? %>
-          <button type="button" class="btn btn-secondary">
-            <%= fa_icon "user" %>
-            <%= t('header.home') %>
+          <a href="<%= user_path current_user.id %>">
+            <button type="button" class="btn btn-secondary">
+            
+              <%= fa_icon "user" %>
+              <%= t('header.profile') %>
           </button>
+            </a>
+
        <% else %>
           <button type="button" class="btn btn-secondary">
             <%= fa_icon "thumbs-up" %>
