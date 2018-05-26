@@ -52,12 +52,6 @@
       </a>
   
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#" class="text-center" style="color: #0086FF">
-              <%= fa_icon "cloud-upload" %>
-              <button type="button" class="btn btn-sm btn-info">
-                <b><%= t('header.menu.upload') %></b>
-              </button>
-          </a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">
             <%= fa_icon "user" %>
@@ -67,10 +61,16 @@
             <%= fa_icon "cog" %>
             <%= t('header.menu.setting_up') %>
           </a>
-          <a class="dropdown-item" href="#">
-            <%= fa_icon "sign-out" %>
-            <%= t('header.menu.logout') %>
-          </a>
+            
+            <%= form_for(current_user, url: destroy_user_session_path, method: "delete" ) do |form| %>
+                <%= button_tag(:class => " dropdown-item", :type => 'submit') do %>
+                <%= fa_icon "sign-out" %>
+                <%= t('header.menu.logout') %>
+              <% end %> 
+              
+              
+            <% end %>
+           
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#" style="color: #FF0075">
               <%= fa_icon "thumbs-up" %>

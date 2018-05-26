@@ -3,9 +3,17 @@ zh_cn:
     name: 'KindleNote'
     introduce: '管理你的Kindle标记与笔记！'
 
+  action:
+    create: '创建'
+    edit: '编辑'
+    update: '更新'
+    share: '分享'
+    delete: '删除'
+
   nav:
-    application: '应用'
-    profile: '个人'
+    application: '授权应用'
+    profile: '个人中心'
+    book: '书籍'
 
   application:
     authorization: '授权'
@@ -47,6 +55,15 @@ zh_cn:
     retrieve_the_password!: '找回密码 ！'
     thiry_party_login: '第三方登录'
     privacy_protection_hint: "保护您的隐私不受侵犯是我们义不容辞的责任"
+
+  book:
+    title: '标题'
+    author: '作者'
+    describe: '描述'
+    title_hint: '输入标题'
+    author_hint: '输入作者'
+    describe_hint: '输入描述'
+
 
   activerecord:
     errors:

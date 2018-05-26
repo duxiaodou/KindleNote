@@ -53,8 +53,11 @@ class Oauth::EvernoteController < ApplicationController
                 sign_in evernote_accessToken.user
             else
                 flash[:success] = "注册成功，请及时设置您的邮箱和密码"
-                new_user = User.create(name: evernote_user.username, password_digest: 'kindlenote')
-                new_user.access_tokens.create(user: new_user.id, name: 'evernote', access_token: access_token, openid: evernote_user.id, expires: Time.at(access_token_expires.to_i / 1000), revoked:true )
+                email = "#{Devise.friendly_token.first(16)}@kindlenote.org"
+                password = Devise.friendly_token.first(16)
+                logger.debug(password)
+                new_user = User.create!(name: evernote_user.username, email: email,password: password)
+                new_user.access_tokens.create(user: new_user, name: 'evernote', access_token: access_token, openid: evernote_user.id, expires: Time.at(access_token_expires.to_i / 1000), revoked:true )
                 sign_in new_user
             end
         end

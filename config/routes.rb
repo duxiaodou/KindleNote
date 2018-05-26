@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'fragments/index'
+  get 'books/index'
+  get 'notes/index'
   get 'home/index', as: 'home'
 
   devise_for :users, :controllers => {:registrations => "users/registrations"}
@@ -11,6 +14,8 @@ Rails.application.routes.draw do
   post 'clippings',  to: 'clippings#create'
 
   resources :users
+  resources :books
+  resources :notes
 
   scope 'oauth' do
     scope 'evernote' do

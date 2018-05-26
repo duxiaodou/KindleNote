@@ -34,9 +34,17 @@ en:
       name: 'KindleNote'
       introduce: 'Export your kindle highlights and notes !'
 
+  action:
+    create: 'Create'
+    edit: 'Edit'
+    update: 'Update'
+    share: 'Share'
+    delete: 'Delete'
+
   nav:
     application: 'Application'
     profile: 'Profile'
+    book: 'Book'
 
   application:
     authorization: 'Authorization'
@@ -78,4 +86,15 @@ en:
     retrieve_the_password!: 'Retrieve the password !'
     thiry_party_login: 'Thiry Party Login'
     privacy_protection: "We'll never share your email with anyone else."
+
+  book:
+    title: 'Title'
+    author: 'Author'
+    describe: 'Describe'
+    title_hint: 'Enter title'
+    author_hint: 'Enter author'
+    describe_hint: 'Enter describe'
+
+
+
 

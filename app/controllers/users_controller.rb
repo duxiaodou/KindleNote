@@ -21,7 +21,8 @@ class UsersController < ApplicationController
       current_user.avatar.attach(params[:user][:avatar])
     end
     current_user.update(user_params.except(:avatar))
-    render 'users/show'
+    
+    redirect_to home_index_path
 
   end
 

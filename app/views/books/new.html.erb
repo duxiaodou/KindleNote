@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-3"></div>
+  <div class="col-6">
+    <%= form_for(@book, method: "post" ) do |form| %>
+    <div class="form-group row">
+      <div class="col-12 text-center">
+        <img src="<%= @book.cover.attached? ? url_for(@book.cover) : image_url('logo.png') %>" style="width: 100px; height: 100px;">
+          <%= form.file_field :cover %><br>
+      </div>
+      
+      <label for="inputEmail" class="col-form-label"><%= t('book.title') %></label>
+      <div class="col-12">
+        <input type="text" name="book[title]" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="<%= t('book.title_hint') %>" value="<%= @book.title %>">
+      </div>
+
+      <label for="inputEmail4" class="col-form-label"><%= t('book.author') %></label>
+      <div class="col-12">
+        <input type="text" name="book[author]" class="form-control" id="exampleInputPassword1" placeholder="<%= t('book.author_hint') %>" value="<%= @book.author %>">
+      </div>
+
+      <label for="inputEmail4" class="col-form-label"><%= t('book.describe') %></label>
+      <div class="col-12">
+        <input type="text" name="book[describe]" class="form-control" id="exampleInputPassword1" placeholder="<%= t('book.describe_hint') %>" value="<%= @book.describe %>">
+      </div>
+    </div>
+    <%= form.submit t('action.create')+t('nav.book'), :class => "btn btn-info pull-right" %><br>
+    <% end %>
+  </div>
+  <div class="col-3"></div>
+</div>
