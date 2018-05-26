@@ -3,6 +3,18 @@ zh_cn:
     name: 'KindleNote'
     introduce: '管理你的Kindle标记与笔记！'
 
+  nav:
+    application: '应用'
+    profile: '个人'
+
+  application:
+    authorization: '授权'
+    revoke: '移除'
+    qq: 'QQ'
+    evernote: 'Evernote'
+    yinxiang: '印象笔记'
+    youdao: '有道笔记'
+
   header:
     login: '登 录'
     register: '注 册'

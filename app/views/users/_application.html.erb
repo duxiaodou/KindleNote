@@ -4,16 +4,20 @@
   </div>
   <div class="col-4  text-center vertical-middle">
     <div class="row">
-      <div class="col-6">
-        <h5 class="display-5 "><b>Evernote</b></h5>
+      <div class="col-7">
+        <h5 class="display-5 "><b><%= t('application.evernote') %></b></h5>
       </div>
-      <div class="col-6">
+      <div class="col-5">
         <span class="badge badge-info"><%= authorization('evernote').title if authorization('evernote') %></span>
         
       </div>
     </div>
-    <div class="row text-center">
-      <span class="badge badge-dark"><%= authorization('evernote').expires if authorization('evernote') %></span>
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-11">
+        <span class="badge badge-dark"><%= authorization('evernote').expires if authorization('evernote') %></span>
+      </div>
+      
     </div>
   </div>
 
@@ -21,35 +25,40 @@
     <% if authorization('evernote') %>
       <a href="<%= evernote_revoke_path %>">
         <button type="button" class="btn btn-secondary pull-right">
-        Revoke
+        <%= t('application.revoke') %>
         </button>
       </a>
     <% else %>
       <a href="<%= evernote_authorize_path %>">
         <button type="button" class="btn btn-info pull-right">
-        Authorization
+        <%= t('application.authorization') %>
         </button>
       </a>
     <% end %>
   </div>
 </div>
 
+<div class="dropdown-divider"></div>
 <div class="row" style="margin-top: 30px;">
   <div class="col-3">
     <%= image_tag "icon/youdao.png", :style =>"width: 60px; height: 60px;" %>
   </div>
   <div class="col-4  text-center vertical-middle">
     <div class="row">
-      <div class="col-6">
-        <h5 class="display-5 "><b>Evernote</b></h5>
+      <div class="col-7">
+        <h5 class="display-5 "><b><%= t('application.youdao') %></b></h5>
       </div>
-      <div class="col-6">
+      <div class="col-5">
         <span class="badge badge-info"><%= authorization('youdao').title if authorization('youdao') %></span>
         
       </div>
     </div>
-    <div class="row text-center">
-      <span class="badge badge-dark"><%= authorization('youdao').expires if authorization('youdao') %></span>
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-11">
+        <span class="badge badge-dark"><%= authorization('youdao').expires if authorization('youdao') %></span>
+      </div>
+      
     </div>
   </div>
 
@@ -57,35 +66,40 @@
     <% if authorization('youdao') %>
       <a href="<%= youdao_revoke_path %>">
         <button type="button" class="btn btn-secondary pull-right">
-        Revoke
+        <%= t('application.revoke') %>
         </button>
       </a>
     <% else %>
       <a href="<%= youdao_authorize_path %>">
         <button type="button" class="btn btn-info pull-right">
-        Authorization
+        <%= t('application.authorization') %>
         </button>
       </a>
     <% end %>
   </div>
 </div>
 
+<div class="dropdown-divider"></div>
 <div class="row" style="margin-top: 30px;">
   <div class="col-3">
     <%= image_tag "icon/qq.png", :style =>"width: 60px; height: 60px;" %>
   </div>
   <div class="col-4  text-center vertical-middle">
     <div class="row">
-      <div class="col-6">
-        <h5 class="display-5 "><b>QQ</b></h5>
+      <div class="col-7">
+        <h5 class="display-5 "><b><%= t('application.qq') %></b></h5>
       </div>
-      <div class="col-6">
+      <div class="col-5">
         <span class="badge badge-info"><%= authorization('qq').title if authorization('qq') %></span>
         
       </div>
     </div>
-    <div class="row text-center">
-      <span class="badge badge-dark"><%= authorization('qq').expires if authorization('qq') %></span>
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-11">
+        <span class="badge badge-dark"><%= authorization('qq').expires if authorization('qq') %></span>
+      </div>
+      
     </div>
   </div>
 
@@ -93,15 +107,17 @@
     <% if authorization('qq') %>
       <a href="<%= qq_revoke_path %>">
         <button type="button" class="btn btn-secondary pull-right">
-        Revoke
+        <%= t('application.revoke') %>
         </button>
       </a>
     <% else %>
       <a href="<%= qq_authorize_path %>">
         <button type="button" class="btn btn-info pull-right">
-        Authorization
+         <%= t('application.authorization') %>
         </button>
       </a>
     <% end %>
   </div>
 </div>
+
+ <div class="dropdown-divider"></div>

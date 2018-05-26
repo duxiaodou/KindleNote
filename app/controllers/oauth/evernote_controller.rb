@@ -1,7 +1,10 @@
 require 'evernote_oauth'
 
 class Oauth::EvernoteController < ApplicationController
-      before_action :authenticate_user!,  :except => [:authorize, :callback ]
+
+    include UsersHelper
+    
+    before_action :authenticate_user!,  :except => [:authorize, :callback ]
 
     def authorize
         callback_url = request.url.chomp("authorize").concat("callback")
@@ -42,7 +45,7 @@ class Oauth::EvernoteController < ApplicationController
                 flash[:success] = "绑定Evernote成功"
                 current_user.access_tokens.create(user: current_user, name: 'evernote', title: evernote_user.username, access_token: access_token, openid: evernote_user.id, expires: Time.at(access_token_expires.to_i / 1000), revoked:true )
             end
-            return redirect_to root_path
+            return redirect_to home_path
         else
             # 旧用户登录
             if !evernote_accessToken.nil?
@@ -55,7 +58,14 @@ class Oauth::EvernoteController < ApplicationController
                 sign_in new_user
             end
         end
-        redirect_to root_path
+        redirect_to home_path
+    end
+
+    def revoke
+        evernote_accessToken = authorization('evernote')
+        evernote_accessToken.delete if evernote_accessToken
+        flash[:success] = "您已与该Evernote账号解除绑定"
+        redirect_to home_path
     end
 
 end

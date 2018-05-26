@@ -34,6 +34,18 @@ en:
       name: 'KindleNote'
       introduce: 'Export your kindle highlights and notes !'
 
+  nav:
+    application: 'Application'
+    profile: 'Profile'
+
+  application:
+    authorization: 'Authorization'
+    revoke: 'Revoke'
+    qq: 'QQ'
+    evernote: 'Evernote'
+    yinxiang: 'Yinxiang'
+    youdao: 'Youdao'
+
   header:
     login: 'Log in'
     register: 'Register'
