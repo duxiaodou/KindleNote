@@ -42,6 +42,8 @@ gem 'material-sass', '~> 4.1.1'
 gem "font-awesome-rails"
 gem 'devise', '~> 4.2'
 gem 'activestorage'
+gem 'omniauth', '~> 1.8', '>= 1.8.1'
+gem 'evernote_oauth', '~> 0.2.3'
 
 
 group :development, :test do

@@ -28,7 +28,7 @@
     <li class="nav-item" style="margin-right: 10px;">
       <div class="btn-group" role="group" aria-label="Basic example">
         <% if user_signed_in? %>
-          <a href="<%= user_path current_user.id %>">
+          <a href="<%= home_path %>">
             <button type="button" class="btn btn-secondary">
             
               <%= fa_icon "user" %>

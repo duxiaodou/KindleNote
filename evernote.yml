@@ -1,0 +1,4 @@
+development:
+  consumer_key: 'your consumer_key'
+  consumer_secret: 'your consumer_secret'
+  sandbox: true
