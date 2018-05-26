@@ -30,6 +30,12 @@ Rails.application.routes.draw do
       get 'callback',      to: 'oauth/youdao#callback', as: 'youdao_callback'
       get 'revoke',     to: 'oauth/youdao#revoke', as: 'youdao_revoke'
     end
+
+    scope 'weibo' do
+      get 'authorize',     to: 'oauth/weibo#authorize', as: 'weibo_authorize'
+      get 'callback',      to: 'oauth/weibo#callback', as: 'weibo_callback'
+      get 'revoke',     to: 'oauth/weibo#revoke', as: 'weibo_revoke'
+    end
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

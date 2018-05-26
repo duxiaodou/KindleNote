@@ -45,6 +45,7 @@ en:
     evernote: 'Evernote'
     yinxiang: 'Yinxiang'
     youdao: 'Youdao'
+    weibo: 'Weibo'
 
   header:
     login: 'Log in'

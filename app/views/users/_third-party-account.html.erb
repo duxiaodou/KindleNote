@@ -1,0 +1,40 @@
+<div class="row" style="margin-top: 30px;">
+  <div class="col-3">
+    <img src="<%= image_url('icon/'+third_party_account+'.png') %>" style="width: 60px; height: 60px;">
+  </div>
+  <div class="col-4  text-center vertical-middle">
+    <div class="row">
+      <div class="col-7">
+        <h5 class="display-5 "><b><%= t('application.'+third_party_account) %></b></h5>
+      </div>
+      <div class="col-5">
+        <span class="badge badge-info"><%= authorization(third_party_account).title if authorization(third_party_account) %></span>
+        
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-11">
+        <span class="badge badge-dark"><%= authorization(third_party_account).expires if authorization(third_party_account) %></span>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="col-5">
+    <% if authorization(third_party_account) %>
+      <a href="<%= revoke_path %>">
+        <button type="button" class="btn btn-secondary pull-right">
+        <%= t('application.revoke') %>
+        </button>
+      </a>
+    <% else %>
+      <a href="<%= authorize_path %>">
+        <button type="button" class="btn btn-info pull-right">
+        <%= t('application.authorization') %>
+        </button>
+      </a>
+    <% end %>
+  </div>
+</div>
+<div class="dropdown-divider"></div>
