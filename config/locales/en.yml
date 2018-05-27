@@ -95,6 +95,11 @@ en:
     author_hint: 'Enter author'
     describe_hint: 'Enter describe'
 
+  note:
+    type:
+        highlight: 'Highlight'
+        note: 'Note'
+
 
 
 

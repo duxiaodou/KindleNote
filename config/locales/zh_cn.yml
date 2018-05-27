@@ -64,6 +64,11 @@ zh_cn:
     author_hint: '输入作者'
     describe_hint: '输入描述'
 
+  note:
+    type:
+        highlight: '标记'
+        note: '笔记'
+
 
   activerecord:
     errors:
