@@ -63,11 +63,13 @@ zh_cn:
     title_hint: '输入标题'
     author_hint: '输入作者'
     describe_hint: '输入描述'
+    no_describe: '这本书暂时还没有任何描述信息哟😁'
 
   note:
     type:
         highlight: '标记'
         note: '笔记'
+    no_describe: '该笔记暂时还没有任何描述信息哟😁'
 
 
   activerecord:
