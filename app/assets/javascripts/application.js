@@ -18,3 +18,7 @@
 //= require popper
 //= require bootstrap
 //= require material
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+

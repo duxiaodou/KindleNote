@@ -1,0 +1,10 @@
+<div class="row">
+
+  <h1 class="display-4"><%= @note.title %></h1>
+  <p class="lead"><% @note.describe %></p>
+  <hr class="my-4">
+
+  <div class="list-group">
+    <%= render partial: "fragment", collection: @note.fragments %>
+  </div>
+</div>

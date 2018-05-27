@@ -1,0 +1,29 @@
+<div class="col-4">
+  <div class="card" style="margin-top: 30px;">
+    <img class="card-img-top" src="<%= book.cover.attached? ? url_for(book.cover) : image_url('book-default-cover.png') %>" alt="Card image cap">
+    <div class="card-body">
+      <div class="text-center">
+        <button type="button" class="btn btn-link" style="overflow:hidden; white-space:nowrap; text-overflow:ellipsis;" data-toggle="tooltip" data-placement="top" title="<%= book.title %>">
+          <a href="<%= book_path book %>"><h5><%= book.title %></h5></a>
+        </button>
+      </div>
+      <div class="text-center">
+        <h6 class="card-subtitle mb-2 text-muted" style="overflow:hidden; white-space:nowrap; text-overflow:ellipsis;" data-toggle="tooltip" data-placement="top" title="<%= book.title %>">
+          <%= book.author %>
+        </h6>
+      </div>
+      <p class="card-text"><%= book.describe %></p>
+      <div class="row">
+        <div class="col-4">
+          <%= fa_icon "paper-plane", class:'fa-2x' %><%= book.notes.count %>
+        </div>
+        <div class="col-4">
+            <%= fa_icon "heart", class:'fa-2x' %>12
+        </div>
+        <div class="col-4">
+          <%= fa_icon "comment", class:'fa-2x' %>12
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
