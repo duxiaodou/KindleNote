@@ -94,11 +94,13 @@ en:
     title_hint: 'Enter title'
     author_hint: 'Enter author'
     describe_hint: 'Enter describe'
+    no_describe: 'No description'
 
   note:
     type:
         highlight: 'Highlight'
         note: 'Note'
+    no_describe: 'No description'
 
 
 

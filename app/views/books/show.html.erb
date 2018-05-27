@@ -1,30 +1,34 @@
 <div class="row">
-  <div class="col-3"></div>
-  <div class="col-6">
-    <%= form_for(@book, method: "post" ) do |form| %>
-    <div class="form-group row">
-      <div class="col-12 text-center">
-        <img src="<%= @book.cover.attached? ? url_for(@book.cover) : image_url('logo.png') %>" style="width: 100px; height: 100px;">
-          <%= form.file_field :cover %><br>
-      </div>
-      
-      <label for="inputEmail" class="col-form-label"><%= t('book.title') %></label>
-      <div class="col-12">
-        <input type="text" name="book[title]" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="<%= t('book.title_hint') %>" value="<%= @book.title %>">
-      </div>
+  <%= render partial: "book", locals: {book: @book } %>
+  <div class="col-8" style="margin-top: 30px;">
+    <blockquote class="blockquote">
+      <p class="mb-0 text-truncate" ><%= @book.describe %></p>
+      <footer class="blockquote-footer"><%= @book.author %></footer>
+    </blockquote>
+    <div class="row col-12">
+      <% @book.rating.to_i.times do %>
+        <%= fa_icon 'star', :style => 'color: #0086FF;' %>
+      <% end %>
+      <% (5-@book.rating.to_i).times do %>
+        <%= fa_icon 'star'%>
+      <% end %>
+    </div>
 
-      <label for="inputEmail4" class="col-form-label"><%= t('book.author') %></label>
-      <div class="col-12">
-        <input type="text" name="book[author]" class="form-control" id="exampleInputPassword1" placeholder="<%= t('book.author_hint') %>" value="<%= @book.author %>">
-      </div>
-
-      <label for="inputEmail4" class="col-form-label"><%= t('book.describe') %></label>
-      <div class="col-12">
-        <input type="text" name="book[describe]" class="form-control" id="exampleInputPassword1" placeholder="<%= t('book.describe_hint') %>" value="<%= @book.describe %>">
+    <div class="row" style="margin-top: 30px;">
+      <div class="list-group col-12">
+        <% @book.notes.each do |note| %>
+          <div style="margin-top: 20px;">
+            <a href="<%= note_path note %>" class="list-group-item list-group-item-action flex-column align-items-start active">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1"><%= note.title %></h5>
+                <small><%= note.created_at %></small>
+              </div>
+              <p class="mb-1"><%= note.describe ? note.describe : t('note.no_describe') %></p>
+              <small><%= note.user.email %></small>
+            </a>
+          </div>
+        <% end %>
       </div>
     </div>
-    <%= form.submit t('action.create')+t('nav.book'), :class => "btn btn-info pull-right" %><br>
-    <% end %>
   </div>
-  <div class="col-3"></div>
 </div>
