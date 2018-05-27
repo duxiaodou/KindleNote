@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   get 'clippings',  to: 'clippings#new'
   post 'clippings',  to: 'clippings#create'
+  patch 'clippings', to: 'clippings#parse', as: 'cliping_parse'
 
   resources :users
   resources :books

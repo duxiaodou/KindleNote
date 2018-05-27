@@ -3,3 +3,10 @@
   <%= form.file_field :clipping %><br>
   <%= form.submit %>
 <% end %>
+
+<% if current_user.clipping.attached? %>
+  <%= form_for(current_user, url: clippings_path, method: "patch" ) do |form| %>
+
+  <%= form.submit %>
+  <% end %>
+<% end %>

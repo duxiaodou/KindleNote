@@ -44,6 +44,7 @@ gem 'devise', '~> 4.2'
 gem 'activestorage'
 gem 'omniauth', '~> 1.8', '>= 1.8.1'
 gem 'evernote_oauth', '~> 0.2.3'
+gem 'clippings', '~> 0.1.4'
 
 
 group :development, :test do
