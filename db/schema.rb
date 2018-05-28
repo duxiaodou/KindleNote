@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_26_065733) do
+ActiveRecord::Schema.define(version: 2018_05_27_123410) do
 
   create_table "access_tokens", force: :cascade do |t|
     t.integer "user_id"
@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(version: 2018_05_26_065733) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["note_id"], name: "index_fragments_on_note_id"
+    t.index ["user_id", "note_id", "content", "datetime"], name: "unique_index_fragments", unique: true
     t.index ["user_id"], name: "index_fragments_on_user_id"
   end
 

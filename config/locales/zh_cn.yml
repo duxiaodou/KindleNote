@@ -11,9 +11,19 @@ zh_cn:
     delete: '删除'
 
   nav:
-    application: '授权应用'
-    profile: '个人中心'
+    home: '主页'
     book: '书籍'
+    note: '笔记'
+    discover: '发现'
+    search: '搜索'
+    help: '帮助'
+    person: '我'
+    search_hint: '搜索书籍、笔记... ...'
+
+
+  user:
+    application: '授权应用'
+    profile: '个人资料'
 
   application:
     authorization: '授权'
