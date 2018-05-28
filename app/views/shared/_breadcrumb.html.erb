@@ -1,7 +1,19 @@
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item"><a href="#">Library</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Data</li>
+    <li class="breadcrumb-item">
+      <a href="<%= root_path %>">
+        <%= fa_icon "home" %>
+        <%= t('nav.home') %>
+      </a>
+    </li>
+
+    <% breadcrumb_item_last = breadcrumb_items.pop %>
+    <%= render partial: "shared/breadcrumbItem", collection: breadcrumb_items %>
+    
+    <li class="breadcrumb-item active">
+      <a href="<%= breadcrumb_item_last[:url] %>">
+        <%= breadcrumb_item_last[:title] %>
+      </a>
+    </li>
   </ol>
 </nav>

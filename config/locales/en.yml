@@ -35,6 +35,7 @@ en:
       introduce: 'Export your kindle highlights and notes !'
 
   action:
+    all: 'All'
     create: 'Create'
     edit: 'Edit'
     update: 'Update'
@@ -111,6 +112,10 @@ en:
         highlight: 'Highlight'
         note: 'Note'
     no_describe: 'No description'
+
+  views:
+    pagination:
+        truncate: '......'
 
 
 

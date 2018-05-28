@@ -6,7 +6,10 @@
   
   <ul class="nav nav-pills  nav-tabs" id="app-nav">
     <li class="nav-item">
-      <a class="nav-link" href="<%= root_path %>" id="nav-app-home"><%= t('nav.home') %></a>
+      <a class="nav-link" href="<%= root_path %>" id="nav-app-home">
+        <%= fa_icon "home" %>
+        <%= t('nav.home') %>
+      </a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#" id="nav-app-discover">
