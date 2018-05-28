@@ -1,0 +1,107 @@
+zh_mo:
+  app:
+    name: 'KindleNote'
+    introduce: '管理你的Kindle标记与笔记！'
+
+  action:
+    all: '全部'
+    create: '创建'
+    edit: '编辑'
+    update: '更新'
+    share: '分享'
+    delete: '删除'
+
+  nav:
+    home: '主页'
+    book: '书籍'
+    note: '笔记'
+    discover: '发现'
+    search: '搜索'
+    help: '帮助'
+    person: '个人'
+    search_hint: '搜索书籍、笔记... ...'
+
+
+  user:
+    application: '授权应用'
+    profile: '个人资料'
+
+  application:
+    authorization: '授权'
+    revoke: '移除'
+    qq: 'QQ'
+    evernote: 'Evernote'
+    yinxiang: '印象笔记'
+    youdao: '有道笔记'
+    weibo: '新浪微博'
+
+  header:
+    login: '登 录'
+    register: '注 册'
+    support: '捐 助'
+    profile: '个 人'
+    menu:
+        setting_up: '设置'
+        logout: '退出'
+        support: '捐 助'
+        upload: '上传文件'
+        user: '个人中心'
+
+  register:
+    email_hint: '输入邮箱'
+    password_hint: '输入密码'
+    repetition_password_hint: '再次输入密码'
+    accept_license: '我接受'
+    license: '《用户使用协议》'
+    already_registered?: '已经注册 ？'
+    thiry_party_login: '第三方登录'
+    privacy_protection_hint: '我们不会将您的私密信息分享给他人'
+
+  login:
+    email_hint: '输入邮箱'
+    password_hint: '输入密码'
+    captcha_hint: '输入验证码'
+    remember_me: '记住我'
+    not_yet_registered?: '还未注册 ？'
+    retrieve_the_password!: '找回密码 ！'
+    thiry_party_login: '第三方登录'
+    privacy_protection_hint: "保护您的隐私不受侵犯是我们义不容辞的责任"
+
+  book:
+    title: '标题'
+    author: '作者'
+    describe: '描述'
+    title_hint: '输入标题'
+    author_hint: '输入作者'
+    describe_hint: '输入描述'
+    no_describe: '这本书暂时还没有任何描述信息哟😁'
+
+  note:
+    type:
+        highlight: '标记'
+        note: '笔记'
+    no_describe: '该笔记暂时还没有任何描述信息哟😁'
+
+  views:
+    pagination:
+        first: '首页'
+        last: '末页'
+        previous: '上一页'
+        next: '下一页'
+        truncate: '......'
+
+
+  activerecord:
+    errors:
+        models:
+            user:
+                attributes:
+                    email:
+                        blank: '邮箱不能为空'
+                    password:
+                        too_short: '密码太短'
+                    password_confirmation:
+                        confirmation: '2次输入的密码不一致'
+  will_paginate:
+    previous_label: '上一页'
+    next_label: '下一页'
