@@ -49,23 +49,17 @@
   <ul class="nav nav-pills pull-right">
     <li class="nav-item dropdown" style="margin-right: 10px;">
       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          中文简体
+        <%= get_locale_name_by_code %>
       </a>
   
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">
-            <%= image_tag "flag/China.png", :style =>"width: 50px; height: 50px;" %>
-            中文(简体)
+          <% all_locales.each do |locale| %>
+          <a class="dropdown-item" href="<%= change_locale(locale.keys.first) %>">
+            <img src="<%= image_url('flag/'+locale.keys.first.to_s+'.png') %>" style="width: 50px; height: 50px;">
+            <%= locale.values.first %>
           </a>
-          <a class="dropdown-item" href="#">
-            <%= image_tag "flag/China-HongKong.png", :style =>"width: 50px; height: 50px;" %>
-            中文(繁體)
-          </a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">
-            <%= image_tag "flag/UnitedStates.png", :style =>"width: 50px; height: 50px;" %>
-            English
-          </a>
+          <% end %>
+          
       </div>  
     </li>
 
