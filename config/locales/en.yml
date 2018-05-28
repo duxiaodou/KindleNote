@@ -42,6 +42,16 @@ en:
     delete: 'Delete'
 
   nav:
+    home: 'Home'
+    book: 'Book'
+    note: 'Note'
+    discover: 'Discover'
+    search: 'Search'
+    help: 'Help'
+    person: 'Me'
+    search_hint: 'Enter'
+
+  user:
     application: 'Application'
     profile: 'Profile'
     book: 'Book'
