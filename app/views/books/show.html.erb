@@ -1,8 +1,19 @@
 <div class="row">
+  <div class="col-12">
+    <%= render partial:"shared/breadcrumb", locals: {breadcrumb_items: [
+        {:url => books_path, :title => t('nav.book')},
+        {
+          :url => book_path(@book), :title => @book.title
+        }
+      ]} %>
+  </div>
+</div>
+
+<div class="row">
   <%= render partial: "book", locals: {book: @book } %>
   <div class="col-8" style="margin-top: 30px;">
     <blockquote class="blockquote">
-      <p class="mb-0 text-truncate" ><%= @book.describe %></p>
+      <p class="mb-0 text-truncate" ><%= @book.describe ? @book.describe : t('book.no_describe')  %></p>
       <footer class="blockquote-footer"><%= @book.author %></footer>
     </blockquote>
     <div class="row col-12">
@@ -18,13 +29,13 @@
       <div class="list-group col-12">
         <% @book.notes.each do |note| %>
           <div style="margin-top: 20px;">
-            <a href="<%= note_path note %>" class="list-group-item list-group-item-action flex-column align-items-start active">
+            <a href="<%= book_note_path(@book, note) %>" class="list-group-item list-group-item-action flex-column align-items-start active">
               <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1"><%= note.title %></h5>
+                <h5 class="mb-1 text-secondary"><%= note.title %></h5>
                 <small><%= note.created_at %></small>
               </div>
               <p class="mb-1"><%= note.describe ? note.describe : t('note.no_describe') %></p>
-              <small><%= note.user.email %></small>
+              <small class="text-info"><%= note.user.email %></small>
             </a>
           </div>
         <% end %>

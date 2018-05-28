@@ -18,6 +18,14 @@ Rails.application.routes.draw do
   resources :books
   resources :notes
 
+  resources :users do
+    resources :notes
+  end
+
+  resources :books do
+    resources :notes
+  end
+
   scope 'oauth' do
     scope 'evernote' do
         get 'authorize',     to: 'oauth/evernote#authorize', as: 'evernote_authorize'

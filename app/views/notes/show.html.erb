@@ -1,5 +1,18 @@
 <div class="row">
   <div class="col-12">
+    <%= render partial:"shared/breadcrumb", locals: {breadcrumb_items: [
+        {
+          :url => notes_path, :title => t('nav.note')
+        },
+        {
+          :url => note_path(@note), :title => @note.title
+        }
+      ]} %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
     <h1 class="display-4"><%= @note.title %></h1>
     <p class="lead"><% @note.describe %></p>
     <hr class="my-4">

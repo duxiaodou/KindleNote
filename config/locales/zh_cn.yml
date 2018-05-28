@@ -4,6 +4,7 @@ zh_cn:
     introduce: '管理你的Kindle标记与笔记！'
 
   action:
+    all: '全部'
     create: '创建'
     edit: '编辑'
     update: '更新'
@@ -17,7 +18,7 @@ zh_cn:
     discover: '发现'
     search: '搜索'
     help: '帮助'
-    person: '我'
+    person: '个人'
     search_hint: '搜索书籍、笔记... ...'
 
 
@@ -80,6 +81,14 @@ zh_cn:
         highlight: '标记'
         note: '笔记'
     no_describe: '该笔记暂时还没有任何描述信息哟😁'
+
+  views:
+    pagination:
+        first: '首页'
+        last: '末页'
+        previous: '上一页'
+        next: '下一页'
+        truncate: '......'
 
 
   activerecord:

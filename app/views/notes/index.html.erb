@@ -1,5 +1,49 @@
-<h1>Notes#index</h1>
-<p>Find me in app/views/notes/index.html.erb</p>
+<div class="row">
+  <div class="col-12">
+    <%= render partial:"shared/breadcrumb", locals: {breadcrumb_items: [
+        {:url => notes_path, :title => t('nav.note')},
+        {
+          :url => '#', :title => t('action.all')
+        }
+      ]} %>
+    
+  </div>
+</div>
+
+<div class="row">
+  <% @notes.each do |note| %>
+  <div class="col-4 text-center">
+    <div class="text-center" style="margin-top: 30px;">
+      <img class="img-thumbnail text-center" src="<%= note.cover.attached? ? url_for(note.cover) : image_url('book-default-cover.png') %>" alt="Card image cap" style="width: 180px; height: 200px;">
+      <p class="h5 text-truncate">
+        <a href="<%= book_path(note.book) %>">
+          <%= note.book.title %>
+        </a>          
+      </p>
+    </div>
+  </div>
+  <div class="col-8">
+    <div class="list-group col-12">
+      <div style="margin-top: 20px;">
+        <a href="<%= note_path(note) %>" class="list-group-item list-group-item-action flex-column align-items-start active">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1 text-secondary"><%= note.title %></h5>
+            <small><%= note.created_at %></small>
+          </div>
+          <p class="mb-1"><%= note.describe ? note.describe : t('note.no_describe') %></p>
+          <small class="text-info"><%= note.user.email %></small>
+        </a>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+<div class="row" style="padding-top: 10px;">
+    <div class="col-12 pull-right">
+      <%= paginate @notes %>
+    </div>
+</div>
 
 <script type="text/javascript">
   $('#nav-app-note').tab('show')
