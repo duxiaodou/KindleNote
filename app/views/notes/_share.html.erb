@@ -1,0 +1,11 @@
+<% platforms.each do |platform| %>
+  <div >
+    <%= form_for('',  url: note_share_path(note), method: "post" ) do |form| %>
+      <%= form.hidden_field :platform, :value => platform %>
+      <button type="submit" class="btn-sm btn-link">
+        <img src="<%= image_url('icon/'+platform+'.png') %>" style="width: 30px; height: 30px;">
+      </button>
+      
+    <% end %>
+  </div>
+<% end %>
