@@ -1,5 +1,5 @@
 module UsersHelper
-  def authorization(application)
-    current_user.access_tokens.where(name: application).first
+  def authorization(application, user=current_user)
+    user.access_tokens.where(name: application).first
   end
 end

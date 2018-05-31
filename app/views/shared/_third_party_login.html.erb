@@ -3,12 +3,20 @@
         <small><strong><button class="btn btn-link" data-toggle="collapse" href="#third_party_login" aria-expanded="true" aria-controls="third_party_login"><%= t('register.thiry_party_login') %></button></strong></small>
         <div class="collapse show" id="third_party_login">
             <div class=" img-thumbnail" style="text-align:center">
+                <%= link_to  evernote_authorize_path, :title => "Evernote登录" do %>
+                <%= image_tag "icon/evernote.png", :class => "img-circle", :style =>"width: 50px; height: 50px;" %>
+                <% end %>
+
+                <%= link_to  youdao_authorize_path, :title => "Youdao登录" do %>
+                <%= image_tag "icon/youdao.png", :class => "img-circle", :style =>"width: 50px; height: 50px;" %>
+                <% end %>
+
                 <%= link_to  qq_authorize_path, :title => "QQ登录" do %>
                     <%= image_tag "icon/qq.png", :class => "img-circle", :style =>"width: 50px; height: 50px;" %>
                 <% end %>
-                
-                <%= link_to  evernote_authorize_path, :title => "QQ登录" do %>
-                <%= image_tag "icon/evernote.png", :class => "img-circle", :style =>"width: 50px; height: 50px;" %>
+
+                <%= link_to  weibo_authorize_path, :title => "Weibo登录" do %>
+                <%= image_tag "icon/weibo.png", :class => "img-circle", :style =>"width: 50px; height: 50px;" %>
                 <% end %>
             </div>
         </div>

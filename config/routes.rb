@@ -17,7 +17,9 @@ Rails.application.routes.draw do
 
     resources :users
     resources :books
-    resources :notes
+    resources :notes do
+      post 'share', to: 'notes#share', as: 'share'
+    end
 
     resources :users do
       resources :notes
