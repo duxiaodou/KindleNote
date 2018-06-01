@@ -46,6 +46,8 @@ gem 'omniauth', '~> 1.8', '>= 1.8.1'
 gem 'evernote_oauth', '~> 0.2.3'
 gem 'clippings', '~> 0.1.4'
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
+gem 'rolify', '~> 5.2'
+gem 'pundit', '~> 1.1'
 
 
 group :development, :test do
