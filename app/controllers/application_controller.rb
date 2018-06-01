@@ -1,9 +1,13 @@
 require "active_storage"
 
 class ApplicationController < ActionController::Base
+  include Pundit
+
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :set_locale
   skip_before_action :verify_authenticity_token
+  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+
   protected
 
   def set_locale
@@ -24,4 +28,11 @@ class ApplicationController < ActionController::Base
   def default_url_options
     { locale: I18n.locale }
   end
+
+  def user_not_authorized(exception)
+   policy_name = exception.policy.class.to_s.underscore
+
+   flash[:error] = t "#{policy_name}.#{exception.query}", scope: "pundit", default: :default
+   redirect_to(request.referrer || root_path)
+ end
 end
