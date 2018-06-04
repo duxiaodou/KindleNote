@@ -1,0 +1,39 @@
+<div class="col-12">
+  <%= form_with model: role, local: true do |form| %>
+  <div class="row">
+    <label for="inputEmail" class="col-form-label">角色</label>
+    <div class="col-12">
+      <input type="text" name="role[name]" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="<%= t('book.title_hint') %>" value="<%= @role.name %>">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6">
+      <label for="inputEmail" class="col-form-label">权限</label>
+      <ul class="list-group">
+        <% permissions.all.each_with_index do |permission, index | %>
+        <li class="list-group-item">
+          <%= check_box_tag "role[permissions][#{index}]", permission.id, role.permissions.exists?(permission.id), :class => 'form-check-input position-static' %>
+       
+          <%= permission.name %> : <%= permission.title %>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="col-6">
+      <label for="inputEmail" class="col-form-label">用户</label>
+      <ul class="list-group">
+        <% role.users.each_with_index do |user, index| %>
+        <li class="list-group-item">
+          <%= check_box_tag "role[users][#{index}]", user.id, true, :class => 'form-check-input position-static' %>
+       
+          <%= user.name %>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <%= form.submit t('action.create')+t('nav.book'), :class => "btn btn-info pull-right" %><br>
+  <% end %>
+</div>

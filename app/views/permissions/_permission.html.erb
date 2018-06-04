@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-3"></div>
+  <div class="col-6">
+    <%= form_for(@permission, method: "post" ) do |form| %>
+    <div class="form-group row">
+      
+      <label for="inputEmail" class="col-form-label"></label>
+      <div class="col-12">
+        <input type="text" name="permission[name]" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="<%= t('book.title_hint') %>" value="<%= permission.name %>">
+      </div>
+
+      <label for="inputEmail" class="col-form-label"></label>
+      <div class="col-12">
+        <input type="text" name="permission[title]" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="<%= t('book.title_hint') %>" value="<%= permission.title %>">
+      </div>
+
+      <%= form.submit t('action.create')+t('nav.book'), :class => "btn btn-info pull-right" %><br>
+    </div>
+    <% end %>
+  </div>
+</div>
