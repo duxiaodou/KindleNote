@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'permissions/index'
   scope "/:locale" do
     get 'fragments/index'
     get 'books/index'
@@ -16,6 +17,13 @@ Rails.application.routes.draw do
     patch 'clippings', to: 'clippings#parse', as: 'cliping_parse'
 
     resources :users
+    resources :roles do 
+      post 'permissions', to: 'permissions#attach_permissions', as: 'attach_permissions'
+      delete 'permissions', to: 'permissions#detach_permissions', as: 'detach_permissions'
+      post 'users', to: 'permissions#attach_users', as: 'attach_users'
+      delete 'users', to: 'permissions#detach_users', as: 'detach_users'
+    end
+    resources :permissions
     resources :books
     resources :notes do
       post 'share', to: 'notes#share', as: 'share'
