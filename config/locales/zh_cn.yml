@@ -21,7 +21,13 @@ zh_cn:
     person: '个人'
     search_hint: '搜索书籍、笔记... ...'
 
-
+  welcome:
+    open: '开源'
+    open_description: '开源自由，免费使用。您可以在遵循MIT协议的情况下自由使用'
+    power: '强大'
+    power_description: '在线解析，无需安装。支持笔记导出到Evernote、有道笔记等平台'
+    terse: '简洁'
+    terse_description: '若未必要，未增实体。为您创造舒适的用户体验是我不懈的追求'
   user:
     application: '授权应用'
     profile: '个人资料'
