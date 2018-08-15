@@ -52,6 +52,14 @@ en:
     person: 'Person'
     search_hint: 'Enter'
 
+  welcome:
+    open: 'Open Source'
+    open_description: 'Open source, free to use. You can use it freely following the MIT licence'
+    power: 'Powerful'
+    power_description: 'No need to install. Support notes exported to Evernote、Youdao etc'
+    terse: 'Succinct'
+    terse_description: 'If not necessary, no entity is added. Succinct is beauty'
+
   user:
     application: 'Application'
     profile: 'Profile'

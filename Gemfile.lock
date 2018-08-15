@@ -50,8 +50,13 @@ GEM
     autoprefixer-rails (8.5.0)
       execjs
     bcrypt (3.1.12)
+    bcrypt (3.1.12-java)
+    bcrypt (3.1.12-x64-mingw32)
+    bcrypt (3.1.12-x86-mingw32)
     bindex (0.5.0)
     bootsnap (1.3.0)
+      msgpack (~> 1.0)
+    bootsnap (1.3.0-java)
       msgpack (~> 1.0)
     bootstrap (4.1.1)
       autoprefixer-rails (>= 6.0.3)
@@ -80,6 +85,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
+    concurrent-ruby (1.0.5-java)
     crass (1.0.4)
     devise (4.4.3)
       bcrypt (~> 3.0)
@@ -94,6 +100,9 @@ GEM
       oauth (>= 0.4.1)
     execjs (2.7.0)
     ffi (1.9.23)
+    ffi (1.9.23-java)
+    ffi (1.9.23-x64-mingw32)
+    ffi (1.9.23-x86-mingw32)
     font-awesome-rails (4.7.0.4)
       railties (>= 3.2, < 6.0)
     globalid (0.4.1)
@@ -137,9 +146,18 @@ GEM
     mini_portile2 (2.3.0)
     minitest (5.11.3)
     msgpack (1.2.4)
+    msgpack (1.2.4-java)
+    msgpack (1.2.4-x64-mingw32)
+    msgpack (1.2.4-x86-mingw32)
     multi_json (1.13.1)
     nio4r (2.3.1)
+    nio4r (2.3.1-java)
     nokogiri (1.8.2)
+      mini_portile2 (~> 2.3.0)
+    nokogiri (1.8.2-java)
+    nokogiri (1.8.2-x64-mingw32)
+      mini_portile2 (~> 2.3.0)
+    nokogiri (1.8.2-x86-mingw32)
       mini_portile2 (~> 2.3.0)
     oauth (0.5.4)
     omniauth (1.8.1)
@@ -149,6 +167,7 @@ GEM
     popper_js (1.12.9)
     public_suffix (3.0.2)
     puma (3.11.4)
+    puma (3.11.4-java)
     pundit (1.1.0)
       activesupport (>= 3.0.0)
     rack (2.0.5)
@@ -215,14 +234,20 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.3.13)
+    sqlite3 (1.3.13-x64-mingw32)
+    sqlite3 (1.3.13-x86-mingw32)
+    sqlite3 (1.3.13-x86-mswin32-60)
     thor (0.20.0)
     thread_safe (0.3.6)
+    thread_safe (0.3.6-java)
     tilt (2.0.8)
     turbolinks (5.1.1)
       turbolinks-source (~> 5.1)
     turbolinks-source (5.1.0)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
+    tzinfo-data (1.2018.5)
+      tzinfo (>= 1.0.0)
     uglifier (4.1.10)
       execjs (>= 0.3.0, < 3)
     warden (1.2.7)
@@ -234,12 +259,18 @@ GEM
       railties (>= 5.0)
     websocket-driver (0.7.0)
       websocket-extensions (>= 0.1.0)
+    websocket-driver (0.7.0-java)
+      websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.3)
     xpath (3.0.0)
       nokogiri (~> 1.8)
 
 PLATFORMS
+  java
   ruby
+  x64-mingw32
+  x86-mingw32
+  x86-mswin32
 
 DEPENDENCIES
   activestorage
@@ -273,7 +304,7 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 RUBY VERSION
-   ruby 2.5.1p57
+   ruby 2.6.0
 
 BUNDLED WITH
-   1.16.2
+   1.16.3
