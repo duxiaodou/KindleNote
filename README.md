@@ -1,4 +1,10 @@
-# README
+# KindleNote
+
+[KindleNote.org](https://kindlenote.org) 
+
+Export your kindle highlights and notes。
+
+管理你的Kindle标记与笔记。
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
