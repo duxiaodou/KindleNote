@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     get 'notes/index'
     get 'home/index', as: 'home'
 
-    devise_for :users, :controllers => {:registrations => "users/registrations"}
+    devise_for :users, controllers: { registrations: 'users/registrations', sessions:  "users/sessions"}
 
     get 'welcome/index'
 

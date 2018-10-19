@@ -104,6 +104,7 @@ zh_cn:
                 attributes:
                     email:
                         blank: '邮箱不能为空'
+                        taken: '邮箱已被使用'
                     password:
                         too_short: '密码太短'
                     password_confirmation:

@@ -24,9 +24,9 @@ zh_cn:
       unlock_instructions:
         subject: "Unlock instructions"
       email_changed:
-        subject: "Email Changed"
+        subject: "邮箱已更改"
       password_change:
-        subject: "Password Changed"
+        subject: "密码已更改"
     omniauth_callbacks:
       failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
       success: "Successfully authenticated from %{kind} account."
@@ -56,9 +56,9 @@ zh_cn:
     messages:
       already_confirmed: "was already confirmed, please try signing in"
       confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
-      expired: "has expired, please request a new one"
-      not_found: "not found"
-      not_locked: "was not locked"
+      expired: "已经过期,请重新发起请求"
+      not_found: "未找到"
+      not_locked: "未锁定"
       not_saved:
         one: "发生了1个错误"
         other: "发生了%{count}个错误"

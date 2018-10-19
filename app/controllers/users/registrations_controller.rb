@@ -1,9 +1,18 @@
 # frozen_string_literal: true
 
 class Users::RegistrationsController < Devise::RegistrationsController
-  # before_action :configure_sign_up_params, only: [:create]
+  prepend_before_action :valify_captcha!, only: [:create]
+  #before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
   # GET /resource/sign_up
+  def valify_captcha!
+    unless verify_rucaptcha?(resource)
+      flash[:danger] = t 'rucaptcha.invalid'
+      return false
+    end
+    true
+  end
+
   def new
     super
     new_user_registration_path
@@ -16,19 +25,20 @@ class Users::RegistrationsController < Devise::RegistrationsController
     yield resource if block_given?
     if resource.persisted?
       if resource.active_for_authentication?
-        set_flash_message! :notice, :signed_up
+        flash[:success] =  'sign'
+        set_flash_message! :success, :signed_up
         sign_up(resource_name, resource)
         respond_with resource, location: after_sign_up_path_for(resource)
       else
-        set_flash_message! :notice, :"signed_up_but_#{resource.inactive_message}"
+        set_flash_message! :danger, :"signed_up_but_#{resource.inactive_message}"
         expire_data_after_sign_in!
         respond_with resource, location: after_inactive_sign_up_path_for(resource)
       end
     else
       clean_up_passwords resource
       set_minimum_password_length
-      flash[:notice] =  resource.errors.full_messages
-      redirect_to new_user_registration_path, :resource => resource
+      flash[:danger] =  resource.errors.full_messages
+      respond_with resource, location: new_user_registration_path, :resource => resource
     end
   end
 
@@ -70,11 +80,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # # The path used after sign up.
   # def after_sign_up_path_for(resource)
-  #   registration_path
+  #   session_path(resource)
   # end
 
   # # The path used after sign up for inactive accounts.
   # def after_inactive_sign_up_path_for(resource)
-  #   registration_path
+  #   registration_path(resource)
   # end
 end

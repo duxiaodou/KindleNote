@@ -48,6 +48,7 @@ gem 'clippings', '~> 0.1.4'
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
 gem 'rolify', '~> 5.2'
 gem 'pundit', '~> 1.1'
+gem 'rucaptcha'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

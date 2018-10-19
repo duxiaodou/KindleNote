@@ -207,6 +207,8 @@ GEM
     rolify (5.2.0)
     ruby_dep (1.5.0)
     rubyzip (1.2.1)
+    rucaptcha (2.3.1)
+      railties (>= 3.2)
     sass (3.5.6)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -293,6 +295,7 @@ DEPENDENCIES
   pundit (~> 1.1)
   rails (~> 5.2.0)
   rolify (~> 5.2)
+  rucaptcha
   sass-rails (~> 5.0)
   selenium-webdriver
   spring
@@ -307,4 +310,4 @@ RUBY VERSION
    ruby 2.6.0
 
 BUNDLED WITH
-   1.16.3
+   1.16.4
